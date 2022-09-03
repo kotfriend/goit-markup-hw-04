@@ -5,10 +5,10 @@
     --title-block: 50px;
 }
 
+/* ------------ BASICS -------- */
 body {
     font-family: var(--main-font);
 }
-
 h1,
 h2,
 h3,
@@ -18,37 +18,26 @@ h6,
 p {
     margin: 0;
 }
-
 ul,
 ol {
     margin: 0;
     padding: 0;
 }
-
 img {
     display: block;
     max-width: 100%;
     height: auto;
 }
-
 .link {
     text-decoration: none;
 }
-
 .list {
     list-style: none;
 }
-
 .adress {
     font-style: normal;
 }
-
-.conteiner {
-    width: 1170px;
-    margin: 0 auto;
-    padding-left: 15px;
-    padding-right: 15px;
-}
+/* ------------ END BASICS -------- */
 
 /* ------------ COMPONENTS -------- */
 .title {
@@ -59,6 +48,15 @@ img {
     letter-spacing: 0.03em;
     color: #212121;
     margin-bottom: var(--title-block);
+}
+.conteiner {
+    width: 1170px;
+    margin: 0 auto;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+.logo-img {
+    border-radius: 10%;
 }
 /* ------------ END COMPONENTS -------- */
 
@@ -80,11 +78,8 @@ align-items: center;
     display: flex;
     align-items: center;
 }
-.logo {
+.header .logo {
     margin-right: 93px;
-}
-.logo-img {
-    border-radius: 10%;
 }
 .nav-item:not(:last-child) {
     margin-right: 50px;
@@ -96,7 +91,6 @@ align-items: center;
     letter-spacing: 0.02em;
     color: #212121;
 }
-
 .nav-link:hover,
 .nav-link:focus {
     color: var(--accent-color);
@@ -161,18 +155,15 @@ align-items: center;
     background-repeat: no-repeat;
     background-size: cover;
 }
-
 .modal-button {
     min-width: 200px;
     padding: 10px 32px;
-
     font-family: var(--main-font);
     font-weight: 700;
     font-size: 16px;
     line-height: 1.88;
     cursor: pointer;
     color: #FFFFFF;
-
     background: #2196F3;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
     border-radius: 4px;
@@ -217,7 +208,6 @@ align-items: center;
         color: #212121;
         margin-bottom: 10px;
 }
-
 .benefits-text {
         font-weight: 400;
         font-size: 14px;
@@ -240,7 +230,6 @@ align-items: center;
 /* ------------ END BENEFITS -------- */
 
 /* ------------ MODELS -------- */
-
 .models {
     padding-top: 47px;
     padding-bottom: 97px;
@@ -256,7 +245,6 @@ align-items: center;
     margin-top: 30px;
     flex-basis: calc(100% / 4 - 30px);
 }
-
 /* ------------ END MODELS -------- */
 
 /* ------------ SALERS -------- */
@@ -274,7 +262,6 @@ align-items: center;
         color: #212121;
         margin-bottom: 10px;
 }
-
 .salers-text {
         font-weight: 400;
         font-size: 16px;
@@ -449,6 +436,9 @@ align-items: center;
 .footer .conteiner {
     display: flex;
    align-items: center;
+}
+.footer-adress {
+    margin-top: 20px;
 }
 .footer-left-adress {
         font-weight: 400;
