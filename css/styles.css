@@ -101,7 +101,7 @@ align-items: center;
 .nav-link:focus {
     color: var(--accent-color);
 }
-.contact-icon-tel1 {
+.header-contact-list {
     display: flex;
     align-items: center;
     margin-left: auto;
@@ -110,6 +110,7 @@ align-items: center;
     width: 10px;
     height: 16px;
     fill: #757575;
+    margin-right: 10px;
 }
 .contact-link1 {
     font-weight: 500;
@@ -117,25 +118,15 @@ align-items: center;
     line-height: 1.14;
     letter-spacing: 0.02em;
     color: #757575;
-    margin-left: 10px;
-}
-.contact-icon-tel1:hover .contact-link1,
-.contact-icon-tel1:focus .contact-link1 {
-    color: var(--accent-color);
-}
-.contact-icon-tel1:hover .contact-icon-smartphone1,
-.contact-icon-tel1:focus .contact-icon-smartphone1{
-    fill: var(--accent-color);
-}
-.contact-icon-tel2 {
+    margin-right: 30px;
     display: flex;
     align-items: center;
-    margin-left: 30px;
 }
 .contact-icon-smartphone2 {
     width: 10px;
     height: 16px;
     fill: #757575;
+    margin-right: 10px;
 }
 .contact-link2 {
     font-weight: 500;
@@ -143,18 +134,20 @@ align-items: center;
     line-height: 1.14;
     letter-spacing: 0.02em;
     color: #757575;
-    margin-left: 10px;
+    display: flex;
+    align-items: center;
 }
-.contact-icon-tel2:hover .contact-link2,
-.contact-icon-tel2:focus .contact-link2 {
+.contact-link1:hover,
+.contact-link1:focus,
+.contact-link2:hover,
+.contact-link2:focus {
     color: var(--accent-color);
 }
-.contact-icon-tel2:hover .contact-icon-smartphone2,
-.contact-icon-tel2:focus .contact-icon-smartphone2 {
+.contact-link1:hover .contact-icon-smartphone1,
+.contact-link1:focus .contact-icon-smartphone1,
+.contact-link2:hover .contact-icon-smartphone2,
+.contact-link2:focus .contact-icon-smartphone2 {
     fill: var(--accent-color);
-}
-.contact-icon-a {
-    height: 16px;
 }
 /* ------------ END HEADER -------- */
 
