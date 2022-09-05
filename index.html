@@ -12,19 +12,20 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.0.0/modern-normalize.min.css"
         integrity="sha512-ISS7cAi1PEhQ8jnbJpJZMd29NlhNj4AWYyLOSp2CE/CsHxTCu+r+t0D2yoJudVrd0/8fTVPUVDzY5Tvli75u/g=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+        <link rel="stylesheet" href="./css/styles.css">
 </head>
 
 <body>
     <header class="header">
         <div class="conteiner">
         <nav class="header-nav">
-            <a class="logo link" href="./index.html">
-                <img class="logo-img" src="./images/logo.svg" alt="логотип" width="100" height="52">
+            <a class="logo link animate__fadeIn" href="./index.html">
+                <img class="logo-img" src="./images/logo.svg" alt="логотип" width="59">
             </a>
             <ul class="nav-list list">
                 <li class="nav-item">
-                    <a class="nav-link link" href="./index.html">Про нас</a>
+                    <a class="nav-link link active" href="./index.html">Про нас</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link link" href="./models.html">Модельний ряд</a>
@@ -62,7 +63,7 @@
             <div class="conteiner">
             <h1 class="hero-title" lang="en">Apple Office Slavuta</h1>
             <div class="hero-button-magic">
-            <button class="modal-button" type="button">Зворотній звʼязок</button>
+            <button class="modal-button" type="button" data-modal-open>Зворотній звʼязок</button>
             </div>
         </div>
         </section>
@@ -121,28 +122,68 @@
             <h2 class="title">Модельний ряд</h2>
             <ul class="models-list list">
                 <li class="models-item">
+                <div class="models-div-for-text">
                     <img class="models-img" src="./images/models/model-1.jpg" alt="Айфон ІКС АР" width="270" height="260">
+                <p class="models-absolute-text">
+                    iPhone Xr Black
+                </p>
+                </div>
                 </li>
                 <li class="models-item">
+                <div class="models-div-for-text">
                     <img class="models-img" src="./images/models/model-2.jpg" alt="Айфон 8 Плюс" width="270" height="260">
+                <p class="models-absolute-text">
+                    iPhone 8 Plus Gold
+                </p>
+                </div>
                 </li>
                 <li class="models-item">
+                <div class="models-div-for-text">
                     <img class="models-img" src="./images/models/model-3.jpg" alt="Айфон ІКС" width="270" height="260">
+                <p class="models-absolute-text">
+                    iPhone X Space Gray
+                </p>
+                </div>
                 </li>
                 <li class="models-item">
+                <div class="models-div-for-text">
                     <img class="models-img" src="./images/models/model-4.jpg" alt="Айфон 11" width="270" height="260">
+                <p class="models-absolute-text">
+                    iPhone 11 Black
+                </p>
+                </div>
                 </li>
                 <li class="models-item">
+                <div class="models-div-for-text">
                     <img class="models-img" src="./images/models/model-5.jpg" alt="Айфон 11" width="270" height="260">
+                <p class="models-absolute-text">
+                    iPhone 11 Purple
+                </p>
+                </div>
                 </li>
                 <li class="models-item">
+                <div class="models-div-for-text">
                     <img class="models-img" src="./images/models/model-6.jpg" alt="Айфон 11" width="270" height="260">
+                <p class="models-absolute-text">
+                    iPhone 11 Yellow
+                </p>
+                </div>
                 </li>
                 <li class="models-item">
+                <div class="models-div-for-text">
                     <img class="models-img" src="./images/models/model-7.jpg" alt="Айфон 11 Про" width="270" height="260">
+                <p class="models-absolute-text">
+                    iPhone 11 Pro Gold
+                </p>
+                </div>
                 </li>
                 <li class="models-item">
+                <div class="models-div-for-text">
                     <img class="models-img" src="./images/models/model-8.jpg" alt="Айфон 7" width="270" height="260">
+                <p class="models-absolute-text">
+                    iPhone 7 Matt
+                </p>
+                </div>
                 </li>
             </ul>
         </div>
@@ -355,6 +396,7 @@
     </section>
     </main>
 
+    <!--FOOTER-->
     <footer class="footer">
         <div class="conteiner">
             <div class="footer-left">
@@ -412,6 +454,18 @@
             </div>
         </div>
     </footer>
+
+<!--MODAL WINDOWS-->
+    <div class="darkbg is-hidden" data-modal> 
+        <div class="modal-windows">
+            <button type="button" class="modal-windows-button" data-modal-close>
+                <svg class="modal-windows-button-icon">
+                    <use href="./images/sprite.svg#icon-close"></use>
+                </svg>
+            </button>
+        </div>
+    </div>
+    <script src="./js/modal.js"></script>
 </body>
 
 </html>

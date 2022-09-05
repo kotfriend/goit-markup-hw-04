@@ -55,6 +55,10 @@ img {
     padding-left: 15px;
     padding-right: 15px;
 }
+.logo {
+    animation-duration: 1000ms;
+    animation-iteration-count: infinite;
+}
 .logo-img {
     border-radius: 10%;
 }
@@ -90,10 +94,26 @@ align-items: center;
     line-height: 1.14;
     letter-spacing: 0.02em;
     color: #212121;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .nav-link:hover,
 .nav-link:focus {
     color: var(--accent-color);
+}
+.active {
+    position: relative;
+    color: #2196F3;
+}
+.active::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -32px;
+    display: block;
+    width: 100%;
+    height: 4px;
+    background: #2196F3;
+    border-radius: 2px;
 }
 .header-contact-list {
     display: flex;
@@ -105,6 +125,7 @@ align-items: center;
     height: 16px;
     fill: #757575;
     margin-right: 10px;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .contact-link1 {
     font-weight: 500;
@@ -115,12 +136,14 @@ align-items: center;
     margin-right: 30px;
     display: flex;
     align-items: center;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .contact-icon-smartphone2 {
     width: 10px;
     height: 16px;
     fill: #757575;
     margin-right: 10px;
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .contact-link2 {
     font-weight: 500;
@@ -130,6 +153,7 @@ align-items: center;
     color: #757575;
     display: flex;
     align-items: center;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .contact-link1:hover,
 .contact-link1:focus,
@@ -245,6 +269,26 @@ align-items: center;
     margin-top: 30px;
     flex-basis: calc(100% / 4 - 30px);
 }
+.models-div-for-text {
+    position: relative;
+}
+.models-absolute-text {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding-top: 27px;
+    padding-bottom: 27px;
+    background-color: rgba(47, 48, 58, 0.8);
+    font-family: var(--accent-color);
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 16px;
+    text-align: center;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: #FFFFFF;
+}
 /* ------------ END MODELS -------- */
 
 /* ------------ SALERS -------- */
@@ -302,19 +346,21 @@ align-items: center;
     width: 44px;
     height: 44px;
     border-radius: 50%;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .social-icon-link:hover,
 .social-icon-link:focus {
     background-color: #2196F3;
 }
-.social-icon-link:hover .social-icon-svg,
-.social-icon-link:focus .social-icon-svg {
-    fill: #FFFFFF;
-}
 .social-icon-svg {
     width: 20px;
     height: 20px;
-    fill: #afb1b8
+    fill: #afb1b8;
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.social-icon-link:hover .social-icon-svg,
+.social-icon-link:focus .social-icon-svg {
+    fill: #FFFFFF;
 }
 /* ------------ END SALERS -------- */
 
@@ -332,6 +378,7 @@ align-items: center;
     width: 106px;
     height: 60px;
     fill: #AFB1B8;
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .customers-link {
     display: flex;
@@ -341,6 +388,7 @@ align-items: center;
     height: 92px;
     border: 1px solid #AFB1B8;
     border-radius: 4px;
+    transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .customers-link:hover,
 .customers-link:focus {
@@ -383,6 +431,7 @@ align-items: center;
         background: #F5F4FA;
         border-radius: 4px;
         border: 0px;
+        transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1), box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .model-space-button:hover,
 .cmodel-space-button:focus {
@@ -402,9 +451,15 @@ align-items: center;
     flex-basis: calc(100% / 3 - 30px);
     background: #FFFFFF;
 }
-.model-space-item:hover,
-.model-space-item:focus {
-    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+.model-space-link {
+    display: block;
+    transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.model-space-link:hover,
+.model-space-link:focus {
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12),
+        0px 4px 4px rgba(0, 0, 0, 0.06),
+        1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 .model-space-title{
         font-weight: 700;
@@ -424,6 +479,36 @@ align-items: center;
     padding: 20px 24px;
     border: 1px solid #EEEEEE;
     border-top: 0px;
+}
+.for-overlay {
+    position: relative;
+    overflow: hidden;
+}
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    padding-left: 24px;
+    padding-right: 24px;
+    padding-top: 60px;
+    padding-bottom: 60px;
+    
+    font-family: var(--main-font);
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 28px;
+    letter-spacing: 0.03em;
+    color: #FFFFFF;
+    background-color: rgba(33, 150, 243, 0.9);
+    overflow: scroll;
+    transform: translateY(100%);
+
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.model-space-link:hover .overlay,
+.model-space-link:focus .overlay {
+    transform: translateY(0%);
 }
 /* ------------ END MODEL SPACE -------- */
 
@@ -487,9 +572,54 @@ align-items: center;
     border-radius: 50%;
     background-color: rgba(255, 255, 255, 0.1);
     margin-right: 10px;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .footer-icon-link:hover,
 .footer-icon-link:focus {
 background-color: var(--accent-color);
 }
 /* ------------ END FOOTER -------- */
+
+/* ------------ MODAL WINDOWS -------- */
+.darkbg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.2);
+    transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.modal-windows {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 528px;
+    height: 581px;
+    background-color: #ffffff;
+}
+.modal-windows-button {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    width: 30px;
+    height: 30px;
+    background: #FFFFFF;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.modal-windows-button-icon {
+    width: 18px;
+    height: 18px;
+}
+.is-hidden {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+}
+/* ------------ END MODAL WINDOWS -------- */
